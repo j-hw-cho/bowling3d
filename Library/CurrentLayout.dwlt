@@ -40,8 +40,8 @@ MonoBehaviour:
     y: 0
     width: 410
     height: 663
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -67,10 +67,10 @@ MonoBehaviour:
     y: 0
     width: 1442
     height: 663
-  m_MinSize: {x: 406, y: 221}
-  m_MaxSize: {x: 8006, y: 4021}
+  m_MinSize: {x: 404, y: 221}
+  m_MaxSize: {x: 8004, y: 4021}
   vertical: 0
-  controlID: 35
+  controlID: 53
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -91,10 +91,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 683, y: 492}
+  m_MinSize: {x: 681, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 33
+  controlID: 51
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -231,10 +231,10 @@ MonoBehaviour:
     y: 0
     width: 1442
     height: 947
-  m_MinSize: {x: 406, y: 492}
+  m_MinSize: {x: 404, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 34
+  controlID: 52
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -373,19 +373,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scripts
+    - Assets/Models
   m_ViewMode: 1
   m_StartGridSize: 61
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Models
   m_LastFoldersGridSize: 61
   m_LastProjectPath: C:\Users\hyeiwon\Documents\Game\bowling
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 9a290000
-    m_LastClickedID: 10650
-    m_ExpandedIDs: 000000003a29000000ca9a3bffffff7f
+    m_SelectedIDs: b6290000
+    m_LastClickedID: 10678
+    m_ExpandedIDs: 000000003c29000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -413,7 +413,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000003a290000
+    m_ExpandedIDs: 000000003c290000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -440,7 +440,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: fe240000c82500001c240000242400002c240000808bfeff1425000072240000442c0000222e00001a2e0000e06effffd45a0000cc5a0000026f0000a82b0000562f0000a62f0000a22f0000622f0000522f0000722f0000762f0000562900000a290000ce240000322400003624000072250000c22400003a24000000000000542b00004c2900006a29000046290000c0290000a02a00008a2a0000822a00005c290000d4290000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -531,9 +531,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: bce7ffff9cfbffff9efbffff00000000f2290000
+    m_SelectedIDs: 20f2ffff
+    m_LastClickedID: -3552
+    m_ExpandedIDs: 30f2ffff9efbffff000000001a2a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -589,9 +589,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.004131317, y: 5.358261, z: 97.1709}
+    m_Target: {x: 11.54877, y: 5.622691, z: 91.53834}
     speed: 2
-    m_Value: {x: -0.004131317, y: 5.358261, z: 97.1709}
+    m_Value: {x: 11.54877, y: 5.622691, z: 91.53834}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -615,13 +615,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.27379423, y: 0.11277727, z: -0.032367934, w: -0.95463604}
+    m_Target: {x: -0.09773468, y: -0.5466877, z: 0.064402364, w: -0.8291564}
     speed: 2
-    m_Value: {x: -0.27378607, y: 0.11277391, z: -0.03236697, w: -0.9546076}
+    m_Value: {x: -0.09773138, y: -0.5466693, z: 0.06440019, w: -0.82912844}
   m_Size:
-    m_Target: 48.632317
+    m_Target: 191.28923
     speed: 2
-    m_Value: 48.632317
+    m_Value: 191.28923
   m_Ortho:
     m_Target: 0
     speed: 2
