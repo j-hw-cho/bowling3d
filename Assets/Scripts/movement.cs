@@ -25,6 +25,7 @@ public class movement : MonoBehaviour {
 	private float camPosX;
 	private float camPosY;
 
+	private float accelFactor;
 
 	// Use this for initialization
 	void OnEnable () {
@@ -44,6 +45,8 @@ public class movement : MonoBehaviour {
 		camPosY = cam.transform.position.y;
 		camBallYDist = cam.transform.position.y - ball.transform.position.y;
 		camBallZDist = cam.transform.position.z - ball.transform.position.z;
+
+		accelFactor = 2.0f;
 	}
 	
 	// Update is called once per frame
@@ -105,6 +108,7 @@ public class movement : MonoBehaviour {
 
 		float forceX = baseForce * (distX / time);
 		float forceZ = baseForce * (distZ / time);
+		forceZ = forceZ < 1f ? forceZ : forceZ * accelFactor;
 
 		force = new Vector3 (forceX, 0f, forceZ);
 
