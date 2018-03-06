@@ -16,6 +16,7 @@ public class movement : MonoBehaviour {
 
 	private Vector3 initPos;
 	private Vector3 endPos;
+	private Vector3 curPos;
 	private float time;
 
 	public UIController ui;
@@ -38,6 +39,7 @@ public class movement : MonoBehaviour {
 		force = Vector3.zero;
 		initPos = Vector3.zero;
 		endPos = Vector3.zero;
+		curPos = Vector3.zero;
 		time = 0.0f;
 
 		ui = GameObject.Find("Canvas").GetComponent<UIController>();
@@ -46,7 +48,7 @@ public class movement : MonoBehaviour {
 		camBallYDist = cam.transform.position.y - ball.transform.position.y;
 		camBallZDist = cam.transform.position.z - ball.transform.position.z;
 
-		accelFactor = 2.0f;
+		accelFactor = 1.5f;
 	}
 	
 	// Update is called once per frame
@@ -83,16 +85,18 @@ public class movement : MonoBehaviour {
 			//float newCamPosY = ball.transform.position.y + camBallYDist;
 		
 			float newCamPosZ = ball.transform.position.z + camBallZDist;
-			if (newCamPosZ >= 90f) { // near boundary, stop camera
+			if (newCamPosZ >= 95f) { // near boundary, stop camera
 				isMoving = false;
 			} else {
 				
 				cam.transform.position = new Vector3(camPosX, camPosY, newCamPosZ);
 			}
-			if (ballRb.velocity.magnitude <= 0) {	// ball stopped
+
+			/*if (ballRb.velocity.magnitude == 0) {	// ball stopped
 				ui.changeStatusText(2);
 				isMoving = false;
-			} 
+			} */
+		
 		}
 		
 	}
@@ -109,7 +113,10 @@ public class movement : MonoBehaviour {
 
 		float forceX = baseForce * (distX / time);
 		float forceZ = baseForce * (distZ / time);
-		forceZ = forceZ < 1f ? forceZ : forceZ * accelFactor;
+		if (forceZ >= 1f) {
+			forceZ = forceZ >= 2000f ? forceZ + accelFactor: forceZ * accelFactor; 
+		}
+		//forceZ = forceZ < 1f ? forceZ : forceZ * accelFactor;
 
 		force = new Vector3 (forceX, 0f, forceZ);
 
