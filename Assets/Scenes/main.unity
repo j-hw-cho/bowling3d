@@ -283,6 +283,7 @@ MonoBehaviour:
   cam: {fileID: 54953138}
   ball: {fileID: 488687321}
   ballRb: {fileID: 0}
+  pins: []
   baseForce: 1000
   force: {x: 0, y: 0, z: 0}
   hasThrown: 0
@@ -420,6 +421,7 @@ GameObject:
   - component: {fileID: 218149213}
   - component: {fileID: 218149212}
   - component: {fileID: 218149216}
+  - component: {fileID: 218149217}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -469,7 +471,7 @@ MeshCollider:
   m_GameObject: {fileID: 218149211}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 14
@@ -490,7 +492,7 @@ Transform:
   m_GameObject: {fileID: 218149211}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -8.3, z: -2.4}
-  m_LocalScale: {x: 26.338257, y: 26.338274, z: 26.338274}
+  m_LocalScale: {x: 107.984314, y: 26.338274, z: 52.873146}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -502,11 +504,23 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 218149211}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
+  m_IsTrigger: 1
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 10.000001, y: 2.2204459e-16, z: 9.999999}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &218149217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 218149211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1db28abcb1cf4e4cb075270ae7dc8ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ball: {fileID: 488687321}
 --- !u!1 &229097331
 GameObject:
   m_ObjectHideFlags: 0

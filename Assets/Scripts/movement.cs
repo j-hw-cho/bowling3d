@@ -81,8 +81,6 @@ public class movement : MonoBehaviour {
 
 			}
 		} else if (isMoving) {
-			// TODO: move camera (follow ball) if needed
-			//float newCamPosY = ball.transform.position.y + camBallYDist;
 		
 			float newCamPosZ = ball.transform.position.z + camBallZDist;
 			if (newCamPosZ >= 95f) { // near boundary, stop camera
@@ -92,10 +90,10 @@ public class movement : MonoBehaviour {
 				cam.transform.position = new Vector3(camPosX, camPosY, newCamPosZ);
 			}
 
-			/*if (ballRb.velocity.magnitude == 0) {	// ball stopped
+			if (ballRb.velocity.magnitude == 0) {	// ball stopped
 				ui.changeStatusText(2);
 				isMoving = false;
-			} */
+			} 
 		
 		}
 		
@@ -125,6 +123,12 @@ public class movement : MonoBehaviour {
 		ui.changeVectorTxt(2, force);
 
 		isMoving = true;
+
+	}
+
+	void CalcScore() {
+
+
 
 	}
 }
