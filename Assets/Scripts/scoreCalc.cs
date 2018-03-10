@@ -12,12 +12,16 @@ public class scoreCalc : MonoBehaviour {
 	public int score;
 	public int checkedPins;
 
+	public UIController ui;
+
 	void OnEnable() {
 		pins = GameObject.FindGameObjectsWithTag("pin");
 		numPins = pins.Length;
 		isHit = false;
 		score = numPins;
 		checkedPins = 0;
+
+		ui = GameObject.Find("Canvas").GetComponent<UIController>();
 	}
 
 
@@ -51,6 +55,6 @@ public class scoreCalc : MonoBehaviour {
 
 	void DisplayScore() {
 		Debug.Log("Display Score: " + score + "/" + numPins);
-
+		ui.DisplayScore(score, numPins);
 	}
 }

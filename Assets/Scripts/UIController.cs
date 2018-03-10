@@ -2,12 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UIController : MonoBehaviour {
 	public Text initText;
 	public Text endTxt;
 	public Text forceTxt;
 	public Text swipeCheckTxt;
+
+
+	public GameObject endPanel;
+	public Text scoreTxt;
+
 	// Use this for initialization
 	void OnEnable () {
 		initText.text = "";
@@ -15,6 +21,7 @@ public class UIController : MonoBehaviour {
 		forceTxt.text = "";
 		swipeCheckTxt.text = "";
 
+		endPanel.SetActive(false);
 	}
 	
 	// Update is called once per frame
@@ -40,7 +47,20 @@ public class UIController : MonoBehaviour {
 		} else {
 			forceTxt.text = "Force: " + pos.ToString();
 		}
-			
+	}
+
+	public void DisplayScore(int score, int numPin) {
+		endPanel.SetActive(true);
+		if (score == numPin) {
+			scoreTxt.text = "STRIKE!";
+		}
+		scoreTxt.text = score + "/" + numPin;
+
+	}
+
+	public void Replay() {
+		Scene curScene = SceneManager.GetActiveScene();
+		SceneManager.LoadScene(curScene.buildIndex);
 
 	}
 }

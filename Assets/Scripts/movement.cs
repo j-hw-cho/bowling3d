@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class movement : MonoBehaviour {
+	public scoreCalc sc;
 	public GameObject cam;
 	public GameObject ball;
 	public Rigidbody ballRb;
@@ -49,6 +50,8 @@ public class movement : MonoBehaviour {
 		camBallZDist = cam.transform.position.z - ball.transform.position.z;
 
 		accelFactor = 1.5f;
+
+		sc = GameObject.Find("Plane").GetComponent<scoreCalc>();
 	}
 	
 	// Update is called once per frame
@@ -60,6 +63,9 @@ public class movement : MonoBehaviour {
 				} else {
 					// begin swiping
 					// TODO:
+					if (GameObject.Find("initPanel") != null) {
+						GameObject.Find("initPanel").SetActive(false);
+					}
 					time = 0;
 					initPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10));
 					endPos = Vector3.zero;
@@ -93,6 +99,8 @@ public class movement : MonoBehaviour {
 			if (ballRb.velocity.magnitude == 0) {	// ball stopped
 				ui.changeStatusText(2);
 				isMoving = false;
+
+				ui.DisplayScore(0,sc.numPins);
 			} 
 		
 		}
@@ -125,10 +133,5 @@ public class movement : MonoBehaviour {
 		isMoving = true;
 
 	}
-
-	void CalcScore() {
-
-
-
-	}
+		
 }
